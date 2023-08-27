@@ -4,13 +4,15 @@
 - 🪻Meu objetivo é ser uma excelente analista de dados, e poder colaborar com as coisas que venho aprendendo
 - 🌈 Sejam bem vindos!
 - 
-  <div style="display: flex; align-items: center;">
+<div style="display: flex; align-items: center;">
+  <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" alt="Excel" style="margin-right: 20px;">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" style="margin-right: 20px;">
   <img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud Platform" style="margin-right: 20px;">
   <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=power-bi&logoColor=white" alt="Power BI" style="margin-right: 20px;">
   <img src="https://img.shields.io/badge/Looker-15A0C8?style=for-the-badge&logo=looker&logoColor=white" alt="Looker" style="margin-right: 20px;">
   <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
 </div>
+
 
 <div style="display: flex; align-items: center;">
   <img src="https://media.giphy.com/media/S78nyiYj5o78x57iLL/giphy.gif" alt="Texto Alternativo" width="300" style="margin-right: 20px;">
