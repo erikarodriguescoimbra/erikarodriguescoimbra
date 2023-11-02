@@ -1,6 +1,6 @@
 - 🐱 Hi, I’m @erikarodriguescoimbra! Olá!!!! 
 - 🌻 Sou analista de dados,em busca de uma oportunidade para atuar!
-- 🐈‍⬛ Estou participando do bootcamp da DIO em parceria com o Santander 
+- 🐈‍⬛ Estou participando do bootcamp da ADA em parceria com o Santander 
 - 🪻Meu objetivo é ser uma excelente analista de dados, e poder colaborar com as coisas que venho aprendendo
 - 🌈 Sejam bem vindos!
 - 
