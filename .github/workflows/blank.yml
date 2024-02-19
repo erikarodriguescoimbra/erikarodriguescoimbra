@@ -1,46 +1,135 @@
+
 # Nome das Ações:
+document.addEventListener('DOMContentLoaded', () => {
 nome: Jogo da Cobra
+    const board = document.getElementById('game-board');
 
+    const gridSize = 20;
 # Controlador do tempo que será feito a atualização dos arquivos.
+    const cells = [];
 sobre:
+    let snake = [2, 1, 1];
   agendar:
+    let food = generateFood();
     # atualizado a cada 5 horas.
+
     - cron: "0 */5 * * *"
+    function createBoard() {
 
+        for (let i = 0; i < gridSize * gridSize; i++) {
 # Permite executar a lista de Actions (utilizada para testes de build).
+            const cell = document.createElement('div');
 fluxo_de_trabalho_dispatch:
+            cell.classList.add('cell');
 
+            cells.push(cell);
 # Regras
+            board.appendChild(cell);
 empregos:
+        }
   construir:
+    }
     executado: ubuntu-mais-recente
-    passos:
 
+    passos:
+    function drawSnake() {
+
+        snake.forEach(index => cells[index].classList.add('snake'));
       # Verifica o repositório em $GITHUB_WORKSHOP, para que seu trabalho possa acessá-lo
+    }
       - usa: ações/checkout@v2
 
-      # Repositório que será utilizado para gerar os arquivos.
-      - usa: Platane/snk@master
-        id: cobra-gif
-        com:
-          github_user_name: SeuNomeDeUsuario # Substitua pelo seu nome de usuário real
-          gif_out_path: dist/github-contribution-grid-snake.gif
-          svg_out_path: dist/github-contribution-grid-snake.svg
 
+    function drawFood() {
+      # Repositório que será utilizado para gerar os arquivos.
+        cells[food].classList.add('food');
+      - usa: Platane/snk@master
+    }
+        id: cobra-gif
+
+        com:
+    function clearBoard() {
+          github_user_name: SeuNomeDeUsuario # Substitua pelo seu nome de usuário real
+        cells.forEach(cell => {
+          gif_out_path: dist/github-contribution-grid-snake.gif
+            cell.classList.remove('snake', 'food');
+          svg_out_path: dist/github-contribution-grid-snake.svg
+        });
+
+    }
       - executar: git status
 
+
+    function generateFood() {
       # Para as atualizações.
+        return Math.floor(Math.random() * gridSize * gridSize);
       - nome: Enviar alterações
+    }
         usa: ad-m/github-push-action@master
+
         com:
+    function moveSnake() {
           github_token: ${{ secrets.GITHUB_TOKEN }}
+        const head = snake[0];
           ramo: mestre
+        const tail = snake.pop();
           força: verdadeiro
+        cells[tail].classList.remove('snake');
+
 
       - usa: crazy-max/ghaction-github-pages@v2.1.3
+        const direction = 1; // Change this for different directions (1 = right, -1 = left, gridSize = down, -gridSize = up)
         com:
+        const newHead = head + direction;
           # o branch de saída que mencionamos acima
+
           target_branch: saída
+        snake = [newHead, ...snake];
           build_dir: dist
+
         ambiente:
+        if (head === food) {
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            snake.push(tail);
+            food = generateFood();
+            drawFood();
+        }
+
+        drawSnake();
+    }
+
+    function checkCollision() {
+        const head = snake[0];
+        return (
+            snake.includes(head, 1) || // Check if the head collides with the body
+            head < 0 || head >= gridSize * gridSize || // Check if the head is out of bounds
+            (head % gridSize === 0 && snake.length > 1) || // Check if the head hits the left wall
+            (head % gridSize === gridSize - 1 && snake.length > 1) // Check if the head hits the right wall
+        );
+    }
+
+    function gameOver() {
+        alert('Game Over! Press OK to restart.');
+        snake = [2, 1, 1];
+        food = generateFood();
+        clearBoard();
+        drawSnake();
+        drawFood();
+    }
+
+    function gameLoop() {
+        if (checkCollision()) {
+            gameOver();
+        } else {
+            clearBoard();
+            moveSnake();
+            drawFood();
+            setTimeout(gameLoop, 200); // Adjust the speed of the game by changing the timeout value
+        }
+    }
+
+    createBoard();
+    drawSnake();
+    drawFood();
+    gameLoop();
+});
