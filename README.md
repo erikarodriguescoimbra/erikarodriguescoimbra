@@ -1,8 +1,7 @@
 - 🐱 Hi, I’m @erikarodriguescoimbra! Olá!!!! 
 - 🌻 Sou analista de dados,em busca de uma oportunidade para atuar!
-- 🐈‍⬛ Meu objetivo é ser uma excelente analista de dados, e poder colaborar com as coisas que venho aprendendo
 - 🌈 Sejam bem vindos!
-- 
+
 <div style="display: flex; align-items: center;">
   <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" alt="Excel" style="margin-right: 20px;">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" style="margin-right: 20px;">
