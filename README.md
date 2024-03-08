@@ -1,7 +1,6 @@
 - 🐱 Hi, I’m @erikarodriguescoimbra! Olá!!!! 
-- 🌻 Sou analista de dados,em busca de uma oportunidade para atuar!
-- 🌈 Sejam bem vindos!
-
+- 🌻 Atualmente, estou em processo de graduação em Tecnologia em Gestão Financeira, onde venho adquirindo conhecimentos sólidos em gestão de negócios e finanças, ao mesmo tempo que desenvolvo habilidades em plataformas de Business Intelligence. Meu objetivo é aplicar essas competências na área financeira, em empresas de diferentes segmentos e portes, com foco na análise de dados. Além disso, sou Analista de Dados com experiência em ETL, Python, Biblioteca Pandas, PowerBI, GCP, LookerStudio e SQL. Estou em constante busca por aprimoramento para oferecer o melhor em minha área de atuação.
+  
 <div style="display: flex; align-items: center;">
   <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" alt="Excel" style="margin-right: 20px;">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" style="margin-right: 20px;">
